@@ -20,7 +20,7 @@ rm -rf /usr/share/nginx/html/*
 unzip /tmp/frontend.zip &>> $LOG
 VALIDATE $? "Downloading frontend code is"
 
-cp /home/ec2-user/Expense-shell/expense.conf /etc/nginx/default.d/expense.conf &>> $LOG
+cp /home/ec2-user/Expense-Shell-1/expense.conf /etc/nginx/default.d/expense.conf &>> $LOG
 VALIDATE $? "copied conf file is"
 
 systemctl restart nginx &>> $LOG

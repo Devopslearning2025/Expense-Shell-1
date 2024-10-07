@@ -1,5 +1,13 @@
 #!/bin/bash
 
+set -e
+
+handle_error(){
+    echo "Error occured at  $1:$2"
+}
+
+trap 'handle_error ${LINENO} "$BASH_COMMAND"' ERR
+
 USER=$(id -u)
 TIME=$(date +%F-%H-%M-%S)
 SCRIPTNAME=$(echo $0|cut -d "." -f1)
