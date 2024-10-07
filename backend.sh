@@ -38,7 +38,7 @@ VALIDATE $? "unzip backend code is"
 npm install &>> $LOG
 VALIDATE $? "npm dependies install is"
 
-cp /home/ec2-user/Expense-shell/backend.service /etc/systemd/system/backend.service  &>>$LOG
+cp /home/ec2-user/Expense-shell-1/backend.service /etc/systemd/system/backend.service  &>>$LOG
 VALIDATE $? "copied backend.servce"
 
 systemctl daemon-reload  &>>$LOG
