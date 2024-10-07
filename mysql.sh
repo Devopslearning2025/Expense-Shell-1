@@ -14,8 +14,7 @@ mysql -h db.devopslearning2025.online -uroot -p${mysql_root_password} -e 'SHOW D
 
 if [ $? -ne 0 ]
 then 
-    mysql_secure_installationn --set-root-pass ${mysql_root_password} &>> $LOG
- #   VALIDATE $? "root password setting is"
+    mysql_secure_installation --set-root-pass ${mysql_root_password} &>> $LOG
 else
     echo -e "mysql password already setup $Y SKIPPING... $N"
 fi
