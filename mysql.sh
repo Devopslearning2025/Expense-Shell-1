@@ -16,7 +16,7 @@ systemctl start mysqld &>> $LOG
 VALIDATE $? "mysql start is"
 
 ##checking mysql root password setup
-mysql -h db.devopslearning2025.online -uroot -p${mysql_root_password} -e 'SHOW DATABSES;' &>>LOG
+mysql -h db.devopslearning2025.online -uroot -p${mysql_root_password} -e 'SHOW DATABASES;' &>>LOG
 
 if [ $? -ne 0 ]
 then 
